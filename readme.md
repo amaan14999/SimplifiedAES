@@ -11,7 +11,7 @@ Encryption:
 ![1](https://user-images.githubusercontent.com/73187712/208061567-53f86c21-3523-43c7-b75a-b0157c75b3d9.png)
 
 
-where A~K~k is applied first.
+where A<sub>K</sub>k is applied first.
 
 ![](C:/Users/Amaan/Documents/Java/AES/2)
 
