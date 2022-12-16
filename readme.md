@@ -55,3 +55,32 @@ The inverse nibble substitution function makes use of the inverse S-box. Note, f
 
 ![8](https://user-images.githubusercontent.com/73187712/208073771-c483d894-bc75-4e20-b348-99b2bf64cf4e.png)
 
+>The inverse shift row function is identical to the shift row function, because it shifts the second row back to its original position.
+
+**MIX COLUMN**
+
+>The mix column function operates on each column individually. Each nibble of a column is mapped into a new value that is a function of both
+
+![9](https://user-images.githubusercontent.com/73187712/208077072-81b8f029-6725-458c-a1f9-c94ca6727747.png)
+
+>nibbles in that column. The transformation can be defined by the following matrix multiplication on **State**
+
+![10](https://user-images.githubusercontent.com/73187712/208077792-2a8f274e-4b11-46ed-9154-660106b81603.png)
+
+>Performing the matrix multiplication, we get
+
+![11](https://user-images.githubusercontent.com/73187712/208077955-db2bc3a6-e554-4e03-8323-64d93ddb5b20.png)
+
+where arithmetic is performed in GF(2<sup>4</sup>), and the symbol •	refers to a multiplication in GF(2<sup>4</sup>).
+
+**KEY EXPANSION**
+
+>For key expansion, the 16 bits of the initial key are grouped into a row of two 8-bit words. Below figure shows the expansion into sex words, by the calculation of four new words from the initial two words. The algorithm is 
+
+![12](https://user-images.githubusercontent.com/73187712/208079014-191a7792-028a-4788-9951-0ea7f9c588dd.png)
+
+>Rcon is a round constant, defined as follows: RC[i] = x<sup>i+2</sup>, so that RC[1] = x<sup>3</sup> = 1000 and RC[2] = x<sup>4</sup>mod(x<sup>4</sup> + x + 1) = x + 1 = 0011. RC[i] forms the left-most nibble of a byte, with the right-most nibble being all zeroes. Thus, Rcon(1) = 10000000 and Rcon(2) = 00110000.
+>For example, suppose the key is 2D55 = 0010 1101 0101 0101 = w<sub>0</sub>w<sub>1</sub>. Then
+
+![13](https://user-images.githubusercontent.com/73187712/208080308-fa3315c9-0d18-42d7-aecb-5e6520983a96.png)
+
