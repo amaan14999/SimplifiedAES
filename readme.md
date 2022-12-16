@@ -12,10 +12,10 @@ Encryption:
 
 
 where A<sub>K</sub><sub>0</sub> is applied first.
+![2](https://user-images.githubusercontent.com/73187712/208062304-56d7c746-2ef1-4d46-b5d0-095147fb2d24.png)
 
-![](C:/Users/Amaan/Documents/Java/AES/2)
 
-![](C:/Users/Amaan/Documents/Java/AES/3)
+![3](https://user-images.githubusercontent.com/73187712/208062353-945e06a9-ed59-4356-b5f9-7bd20061696c.png)
 
 > Each function operates on a 16-bit state, treated as a matrix of nibbles, where one nibble equals 4 bits. The initial value of the State matrix is the 16-bit plaintext; State is modified by
 > each subsequent function in the encryption process, producing after the last function the 16-bit ciphertext. As Figure 5.12a shows, the ordering of nibbles within the matrix is by column.
