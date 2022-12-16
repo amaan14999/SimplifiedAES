@@ -13,6 +13,8 @@ Encryption:
 
 where A<sub>K</sub><sub>0</sub> is applied first.
 
+Decryption:
+
 ![2](https://user-images.githubusercontent.com/73187712/208062304-56d7c746-2ef1-4d46-b5d0-095147fb2d24.png)
 
 
@@ -21,7 +23,8 @@ where A<sub>K</sub><sub>0</sub> is applied first.
 > Each function operates on a 16-bit state, treated as a matrix of nibbles, where one nibble equals 4 bits. The initial value of the State matrix is the 16-bit plaintext; State is modified by
 > each subsequent function in the encryption process, producing after the last function the 16-bit ciphertext. As Figure 5.12a shows, the ordering of nibbles within the matrix is by column.
 
-![](C:/Users/Amaan/Documents/Java/AES/4)
+![4](https://user-images.githubusercontent.com/73187712/208062941-55a825f0-39c8-413b-a535-314ca91d976e.png)
+
 
 ## S-AES Encryption and Decryption
 
