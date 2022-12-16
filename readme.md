@@ -34,17 +34,7 @@ We now look at the individual functions that are a part of the encryption algori
 
 > The Add Key function conssistes of the bitwise XOR of the 16-bit State Matrix and the 16-Bit round Key. Fig. 5.14 depicts this as a columnwise opeartion, but it can also be viewed as a nibble-wis or bitwise operation. The following is an example:
 
-
-
-
-
-
 ![](assets/fifth.png)
-
-
-
-
-
 
 > The inverse of the add key function is identical to the add key function, because XOR operation is its own inverse.
 
