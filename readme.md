@@ -6,14 +6,14 @@ The following is the Algorithm of S-AES:
 
 > S-AES: The encryption algorithm takes a 16-bit block of plaintext as input and a 16-bit key and produces a 16-bit block of ciphertext as output. The S-AES decryption algorithm takes a 16-bit block of ciphertext and the same 16-bit key used to produce that ciphertext as input and produces the original 16-bit block of plaintext as output. The encryption algorithm involves the use of four different functions, or transformations: add key, nibble substitution (NS), shift row (SR), and mix column (MC), whose operation is explained subsequently. We can concisely express the encryption algorithm as a composition of functions:
 
-Encryption:
+**Encryption:**
 
 ![1](https://user-images.githubusercontent.com/73187712/208061567-53f86c21-3523-43c7-b75a-b0157c75b3d9.png)
 
 
 where A<sub>K</sub><sub>0</sub> is applied first.
 
-Decryption:
+**Decryption:**
 
 ![2](https://user-images.githubusercontent.com/73187712/208062304-56d7c746-2ef1-4d46-b5d0-095147fb2d24.png)
 
@@ -84,3 +84,14 @@ where arithmetic is performed in GF(2<sup>4</sup>), and the symbol •	refers to
 
 ![13](https://user-images.githubusercontent.com/73187712/208080308-fa3315c9-0d18-42d7-aecb-5e6520983a96.png)
 
+>w<sub>2</sub> = 00101101 ⊕ 10000000 ⊕ SubNib(01010101)
+>
+>= 00101101 ⊕ 10000000 ⊕ 00010001 = 10111100
+>
+>w<sub>3</sub> = 10111100 ⊕ 01010101 = 11101001
+
+>w<sub>4</sub> = 10111100 ⊕ 00110000 ⊕ SubNib(10011110)
+>
+>= 10111100 ⊕ 00110000 ⊕ 00101111 = 10100011
+>
+>w<sub>5</sub> = 10100011 ⊕ 11101001 = 01001010
