@@ -30,17 +30,28 @@ Decryption:
 
 We now look at the individual functions that are a part of the encryption algorithm.
 
-==ADDKEY==
+**ADDKEY**
 
 > The Add Key function conssistes of the bitwise XOR of the 16-bit State Matrix and the 16-Bit round Key. Fig. 5.14 depicts this as a columnwise opeartion, but it can also be viewed as a nibble-wis or bitwise operation. The following is an example:
 
-
-![](images/fifth.png)
-
+![fifth](https://user-images.githubusercontent.com/73187712/208072675-775b02df-f332-4408-a6d1-1a8decebc7c9.png)
 
 > The inverse of the add key function is identical to the add key function, because XOR operation is its own inverse.
 
-===NIBBLE SUBSTITUTION===
+**NIBBLE SUBSTITUTION**
 
 > The nibble substituiton function is a simple table look-up. AES defines a 4x4 matrix of nibbble values, called an S-box, that contains a permutation of all possible 4-bit values. Each individual nibble of State is mapped into a new nibble in the following way: The leftmost 2 bits of the nibble are used as a row value, and the rightmost 2 bits are used as a common value. These row and column values serve as indexes into the S-box to select a unique 4-bit output value. For example, the hexadecimal value A refernces row 2, column 2 of the S-box, which contains the value 0. Accordingly, the value of A is mapped into the value 0.
 > Here is an example of the nibble substitution transformation.
+
+![6](https://user-images.githubusercontent.com/73187712/208072834-f0f421e5-f74e-43f7-815d-cd2b71850cac.png)
+
+The inverse nibble substitution function makes use of the inverse S-box. Note, for example, that the input 0 produces the output A, and the input A to the S-box produces 0.
+
+![7](https://user-images.githubusercontent.com/73187712/208073339-d047077b-0d41-4704-bc30-6690a3d3ae12.png)
+
+**SHIFT ROW**
+
+>The Shift row function performs a one-nibble circular shift of the second row of State the first row is not altered. The following is an example.
+
+![8](https://user-images.githubusercontent.com/73187712/208073771-c483d894-bc75-4e20-b348-99b2bf64cf4e.png)
+
