@@ -12,6 +12,7 @@ Encryption:
 
 
 where A<sub>K</sub><sub>0</sub> is applied first.
+
 ![2](https://user-images.githubusercontent.com/73187712/208062304-56d7c746-2ef1-4d46-b5d0-095147fb2d24.png)
 
 
