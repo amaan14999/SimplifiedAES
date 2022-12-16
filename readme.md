@@ -38,6 +38,7 @@ We now look at the individual functions that are a part of the encryption algori
 ![5](assets/5.png)
 
 
+
 > The inverse of the add key function is identical to the add key function, because XOR operation is its own inverse.
 
 ===NIBBLE SUBSTITUTION===
