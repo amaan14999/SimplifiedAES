@@ -7,7 +7,7 @@ The following is the Algorithm of S-AES:
 > S-AES: The encryption algorithm takes a 16-bit block of plaintext as input and a 16-bit key and produces a 16-bit block of ciphertext as output. The S-AES decryption algorithm takes a 16-bit block of ciphertext and the same 16-bit key used to produce that ciphertext as input and produces the original 16-bit block of plaintext as output. The encryption algorithm involves the use of four different functions, or transformations: add key, nibble substitution (NS), shift row (SR), and mix column (MC), whose operation is explained subsequently. We can concisely express the encryption algorithm as a composition of functions:
 
 Encryption:
-![](https://github.com/amaan14999/SimplifiedAES/blob/main/1.png)
+![1](https://github.com/amaan14999/SimplifiedAES/blob/main/1.png)
 
 where A~K0~ is applied first.
 
